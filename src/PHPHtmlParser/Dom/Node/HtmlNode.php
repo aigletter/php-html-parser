@@ -226,6 +226,7 @@ class HtmlNode extends InnerNode
     {
         $this->innerHtml = null;
         $this->outerHtml = null;
+        $this->innerText = null;
         $this->text = null;
         $this->textWithChildren = null;
 
