@@ -73,6 +73,11 @@ class TextNode extends LeafNode
         $this->tag->setHtmlSpecialCharsDecode($htmlSpecialCharsDecode);
     }
 
+    public function innerText(): string
+    {
+        return $this->text();
+    }
+
     /**
      * Returns the text of this node.
      */

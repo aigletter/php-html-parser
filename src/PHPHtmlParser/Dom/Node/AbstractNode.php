@@ -479,6 +479,8 @@ abstract class AbstractNode
      */
     abstract public function text(): string;
 
+    abstract public function innerText(): string;
+
     /**
      * Check is node type textNode.
      */
