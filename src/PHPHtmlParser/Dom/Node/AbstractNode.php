@@ -279,6 +279,26 @@ abstract class AbstractNode
         return $this->parent->nextChild($this->id);
     }
 
+    public function hasPreviousSibling(): bool
+    {
+        try {
+            $this->previousSibling();
+
+            // sibling found, return true;
+            return true;
+        } catch (ParentNotFoundException $e) {
+            // no parent, no next sibling
+            unset($e);
+
+            return false;
+        } catch (ChildNotFoundException $e) {
+            // no sibling found
+            unset($e);
+
+            return false;
+        }
+    }
+
     /**
      * Attempts to get the previous sibling.
      *
